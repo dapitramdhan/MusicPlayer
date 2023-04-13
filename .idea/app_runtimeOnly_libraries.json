@@ -1,0 +1,15 @@
+{
+  "include": "[]",
+  "moduleType": "android_application",
+  "extractApks": false,
+  "plugins": "[com.android.application]",
+  "useR8": false,
+  "targetSdkVersion": 33.0,
+  "versionName": "1.0",
+  "versionCode": 1.0,
+  "minSdkVersion": 21.0,
+  "viewBindingEnabled": false,
+  "bundle_enableUncompressedNativeLibs": false,
+  "runtimeOnlyFiles_libraries": "[]",
+  "zipAlignEnabled": false
+}

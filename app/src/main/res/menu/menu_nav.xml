@@ -1,0 +1,17 @@
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+	<item
+		android:id="@+id/nav_home"
+		android:title="Music"
+		android:icon="@drawable/ic_notif_music_note"/>
+	<item
+		android:id="@+id/nav_video"
+		android:title="Video"
+		android:icon="@drawable/ic_video"/>
+	<item
+		android:id="@+id/nav_settings"
+		android:title="Settings"
+		android:icon="@drawable/ic_settings"/>
+</menu>

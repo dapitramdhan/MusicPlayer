@@ -1,0 +1,16 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+    <!-- Dimens for text -->
+    <dimen name="text_small">10sp</dimen>
+    <dimen name="text_medium">11sp</dimen>
+    <dimen name="text_big_med">12sp</dimen>
+    <dimen name="text_big">13sp</dimen>
+    <dimen name="text_head">18sp</dimen>
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+	<dimen name="divider">0.8dp</dimen>
+
+</resources>

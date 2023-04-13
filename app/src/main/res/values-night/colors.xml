@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="amber">#ffffe082</color>
+    <color name="blue">#ff90caf9</color>
+    <color name="blue_grey">#ffb0bec5</color>
+    <color name="brown">#ffbcaaa4</color>
+    <color name="colorBackgroundHigh">#121212</color>
+    <color name="colorTextHigh">#fffafafa</color>
+    <color name="colorTextLow">#ffe0e0e0</color>
+    <color name="colorTextMed">#ffeeeeee</color>
+    <color name="cyan">#ff80deea</color>
+    <color name="deep_orange">#ffffab91</color>
+    <color name="deep_purple">#ffb39ddb</color>
+    <color name="green">#ffa5d6a7</color>
+    <color name="grey">#ffeeeeee</color>
+    <color name="indigo">#ff9fa8da</color>
+    <color name="light_blue">#ff81d4fa</color>
+    <color name="light_green">#ffc5e1a5</color>
+    <color name="lime">#ffe6ee9c</color>
+    <color name="orange">#ffffcc80</color>
+    <color name="pink">#fff48fb1</color>
+    <color name="purple">#ffce93d8</color>
+    <color name="red">#ffef9a9a</color>
+    <color name="systemBarsColor">#121212</color>
+    <color name="teal">#ff80cbc4</color>
+    <color name="widgetsColor">#212121</color>
+    <color name="windowBackground">#17181b</color>
+    <color name="yellow">#fffff59d</color>
+	<color name="divider">#373737</color>
+	<color name="gray_dark">#121212</color>
+</resources>

@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.github.dapitmusic"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+	// use the library manager instead
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.5.1'
+	// Load image
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+	// Custom crash activity
+	implementation 'cat.ereza:customactivityoncrash:2.3.0'
+	// Equalizer
+	implementation 'com.diogobernardino:williamchart:2.2'
+    implementation 'com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0'
+	implementation 'com.google.code.gson:gson:2.8.6'
+	
+	implementation 'com.squareup.okhttp:okhttp:2.+'
+	debugCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+	
+	// video player
+	implementation 'org.greenrobot:eventbus:3.2.0'
+}

@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/child"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/fr" >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationZ="0.1dp"
+            app:elevation="0.1dp" >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:background="@color/colorBackgroundHigh"
+                app:title="@string/app_name" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                style="@style/TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/colorBackgroundHigh"
+                android:contentDescription="@string/tab_layout_title"
+                app:tabIconTint="@color/tab_color"
+                app:tabIndicator="@drawable/tab_indicator"
+                app:tabIndicatorAnimationMode="linear"
+                app:tabIndicatorFullWidth="true"
+                app:tabRippleColor="?colorPrimary" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:background="@color/divider" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:background="@color/colorBackgroundHigh"
+            android:contentDescription="@string/view_pager_title" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/fr"
+        android:layout_below="@id/child"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation" >
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="1dp"
+            layout="@layout/layout_player_view" />
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_dark"
+		app:itemRippleColor="@drawable/color_alpha"
+        app:itemIconSize="20dp"
+        app:itemTextAppearanceActive="@dimen/design_bottom_navigation_active_text_size"
+        app:itemTextAppearanceInactive="@dimen/design_bottom_navigation_text_size"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_nav" />
+
+</RelativeLayout>

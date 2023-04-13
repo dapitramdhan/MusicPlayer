@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/player_view"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/gray_dark"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/player_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:rippleColor="?colorPrimary" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp" >
+
+                <LinearLayout
+                    android:id="@+id/im"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical|center|center_horizontal"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/color_primary_alpha"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageButton
+							android:id="@+id/img_music"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/ic_vector_music"
+                            android:backgroundTint="?colorPrimary"
+                            android:gravity="center_vertical|center|center_horizontal"
+                            android:scaleType="centerCrop" />
+
+                        <com.github.dapitmusic.equalizer.animation.EqualizerAnimation
+                            android:id="@+id/equalizer_view"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            custom:animDuration="5000"
+                            custom:foregroundColor="?colorPrimary" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/im"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/song_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center|center_horizontal|left"
+                        android:layout_marginBottom="5dp"
+                        android:ellipsize="marquee"
+                        android:gravity="center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="Judul"
+                        android:textColor="@color/colorTextHigh"
+                        android:textSize="@dimen/text_big_med"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/song_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="Subtitle"
+                        android:textColor="#808080"
+                        android:textSize="@dimen/text_big_med"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|right|end"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center|center_horizontal|right|end"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/control_play_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/actionBarItemBackground"
+                android:contentDescription="@string/image"
+                android:padding="5dp"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                app:srcCompat="@drawable/ic_controls_play"
+                app:tint="?colorOnBackground" />
+
+            <ImageButton
+                android:id="@+id/control_queue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/actionBarItemBackground"
+                android:contentDescription="@string/image"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                app:srcCompat="@drawable/ic_music_queue"
+                app:tint="?colorOnBackground" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/song_progress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        app:indicatorColor="?attr/colorPrimary"
+        app:trackCornerRadius="2dp"
+        app:trackThickness="1dp" />
+
+    <ImageView
+        android:id="@+id/albumArt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/song_progress"
+        android:alpha="0.5"
+        android:contentDescription="@string/image" />
+
+</RelativeLayout>
